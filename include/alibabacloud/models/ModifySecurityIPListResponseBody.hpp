@@ -128,11 +128,11 @@ namespace Models
       shared_ptr<int32_t> DBInstanceID_ {};
       // The cluster name.
       shared_ptr<string> DBInstanceName_ {};
-      // The name of the whitelist.
+      // The group name.
       shared_ptr<string> groupName_ {};
-      // The tag of the whitelist.
+      // The group tag.
       shared_ptr<string> groupTag_ {};
-      // The IP addresses and CIDR blocks in the whitelist.
+      // The list of IP addresses in the whitelist group.
       shared_ptr<string> securityIPList_ {};
       // The IP address type.
       shared_ptr<string> securityIPType_ {};
@@ -161,7 +161,7 @@ namespace Models
 
 
   protected:
-    // The returned result.
+    // The returned data.
     shared_ptr<ModifySecurityIPListResponseBody::Data> data_ {};
     // The request ID.
     shared_ptr<string> requestId_ {};

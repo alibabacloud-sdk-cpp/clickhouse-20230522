@@ -79,21 +79,21 @@ namespace Models
     // 
     // This parameter is required.
     shared_ptr<string> DBInstanceId_ {};
-    // The name of the whitelist whose settings you want to modify.
+    // The name of the group to modify.
     shared_ptr<string> groupName_ {};
-    // The modification mode.
+    // The modification mode. Valid values:
     // 
-    // *   0: overwrites the original IP addresses and CIDR blocks in the whitelist.
-    // *   1: adds the IP addresses and CIDR blocks to the whitelist.
-    // *   2: removes the IP addresses and CIDR blocks from the whitelist.
+    // - 0: overwrites the existing whitelist.
+    // - 1: adds IP addresses to the whitelist.
+    // - 2: removes IP addresses from the whitelist.
     // 
-    // >  We recommend that you set the value to 0.
+    // > Set this parameter to 0 to overwrite the existing whitelist.
     shared_ptr<string> modifyMode_ {};
     // The region ID.
     // 
     // This parameter is required.
     shared_ptr<string> regionId_ {};
-    // The IP addresses and CIDR blocks in the whitelist.
+    // The whitelisted IP addresses.
     shared_ptr<string> securityIPList_ {};
   };
 
